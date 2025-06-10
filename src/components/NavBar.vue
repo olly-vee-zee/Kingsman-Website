@@ -1,17 +1,15 @@
 <template>
-  <nav class="fixed top-0 left-0 z-50 w-full bg-blue-700 shadow-lg">
+  <nav class="fixed top-0 left-0 z-50 w-full bg-[#0a1f44] shadow-lg">
     <div class="w-full px-4 mx-auto sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center flex-shrink-0">
           <router-link to="/" class="flex items-center space-x-2">
-            <div class="flex items-center justify-center w-8 h-8 bg-white rounded-full">
-              <span class="text-sm font-bold text-blue-700">
-                <img src="../assets/secondary_logo_light.svg" alt="">
-              </span>
-            </div>
-            <!-- <span class="hidden text-xl font-bold text-white sm:block">Kingsman</span>
-            <span class="text-lg font-bold text-white sm:hidden">KS</span> -->
+           
+        <span class="hidden sm:block">
+        <img src="../assets/secondary_logo_light.svg"  alt="" class="h-16" w-auto > <!-- Adjust height (h-6, h-8, h-10, etc.) -->
+        </span>
+           
           </router-link>
         </div>
 
@@ -21,7 +19,7 @@
             v-for="item in navigation"
             :key="item.name"
             :to="item.href"
-            class="relative px-4 py-2 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-200 hover:bg-blue-600"
+            class="relative px-4 py-2 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-700 hover:bg-blue-800"
             :class="{ 'bg-blue-800 text-blue-100': $route.path === item.href }"
           >
             {{ item.name }}
@@ -34,7 +32,7 @@
             v-for="item in navigation.slice(0, 4)"
             :key="item.name"
             :to="item.href"
-            class="px-3 py-2 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-200 hover:bg-blue-600"
+            class="relative px-4 py-2 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-600 hover:bg-blue-900"
             :class="{ 'bg-blue-800 text-blue-100': $route.path === item.href }"
           >
             {{ item.name }}
@@ -44,7 +42,7 @@
           <div class="relative" ref="moreMenu">
             <button
               @click="moreMenuOpen = !moreMenuOpen"
-              class="flex items-center px-3 py-2 space-x-1 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-200 hover:bg-blue-600"
+              class="flex items-center px-3 py-2 space-x-1 text-sm font-medium text-white transition-all duration-200 rounded-md hover:text-blue-600 hover:bg-blue-900"
             >
               <span>More</span>
               <svg class="w-4 h-4 transition-transform duration-200 transform" :class="{ 'rotate-180': moreMenuOpen }" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -63,8 +61,8 @@
                 :key="item.name"
                 :to="item.href"
                 @click="moreMenuOpen = false"
-                class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-blue-50 hover:text-blue-700"
-                :class="{ 'bg-blue-100 text-blue-700': $route.path === item.href }"
+                class="block px-4 py-2 text-sm text-gray-700 transition-colors duration-200 hover:bg-blue-50 hover:text-blue-600"
+                :class="{ 'bg-blue-100 text-blue-900': $route.path === item.href }"
               >
                 {{ item.name }}
               </router-link>
@@ -76,7 +74,7 @@
         <div class="flex items-center md:hidden">
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="p-2 text-white transition-all duration-200 rounded-md hover:text-blue-200 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-300"
+            class="p-2 text-white transition-all duration-200 rounded-md hover:text-blue-600 hover:bg-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-300"
             :aria-expanded="mobileMenuOpen"
             aria-label="Toggle navigation menu"
           >
