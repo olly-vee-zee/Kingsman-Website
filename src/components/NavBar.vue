@@ -10,8 +10,8 @@
                 <img src="../assets/secondary_logo_light.svg" alt="">
               </span>
             </div>
-            <span class="hidden text-xl font-bold text-white sm:block">Kingsman</span>
-            <span class="text-lg font-bold text-white sm:hidden">KS</span>
+            <!-- <span class="hidden text-xl font-bold text-white sm:block">Kingsman</span>
+            <span class="text-lg font-bold text-white sm:hidden">KS</span> -->
           </router-link>
         </div>
 
